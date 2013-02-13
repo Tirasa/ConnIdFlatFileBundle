@@ -300,19 +300,19 @@ public class FlatFileConnectorTests {
         }
 
         public String toLine(final char fieldd, final char textq) {
-            StringBuffer buf = new StringBuffer();
+            StringBuilder builder = new StringBuilder();
 
-            buf.append(getField(getAccountId(), fieldd, textq));
-            buf.append(fieldd);
-            buf.append(getField(getFirstName(), fieldd, textq));
-            buf.append(fieldd);
-            buf.append(getField(getLastName(), fieldd, textq));
-            buf.append(fieldd);
-            buf.append(getField(getEmail(), fieldd, textq));
-            buf.append(fieldd);
-            buf.append(getField(getChangeNumber(), fieldd, textq));
+            builder.append(getField(getAccountId(), fieldd, textq));
+            builder.append(fieldd);
+            builder.append(getField(getFirstName(), fieldd, textq));
+            builder.append(fieldd);
+            builder.append(getField(getLastName(), fieldd, textq));
+            builder.append(fieldd);
+            builder.append(getField(getEmail(), fieldd, textq));
+            builder.append(fieldd);
+            builder.append(getField(getChangeNumber(), fieldd, textq));
 
-            return buf.toString();
+            return builder.toString();
         }
     }
 
