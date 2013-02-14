@@ -1,0 +1,14 @@
+language: java
+ 
+env:
+  global:
+    - SONATYPE_USERNAME=chicchiricco
+    - secure: "g3wO6RRy00RWh6A30tfVZ+jJiOX3817aA3aDCeYzgjB+wNbXNJ+bv5s9Yg9c\ndhh68Jycp3Uagx/iai8eNOE/kCr6wMfF3ewLukQ+x3qYkNUQTqYtBCAWM9r+\nT42Zd0lJvm55IeFVfE3qfucLPPkm/xWFkex8+76FmTSlpd9ses8="
+
+after_success:
+  - python addServer.py
+  - mvn clean deploy --settings ~/.m2/mySettings.xml
+
+notifications:
+  email:
+    - connid-dev@googlegroups.com
