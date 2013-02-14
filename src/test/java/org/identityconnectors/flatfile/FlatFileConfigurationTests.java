@@ -22,18 +22,16 @@
  */
 package org.identityconnectors.flatfile;
 
-import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.nio.charset.Charset;
-
-import junit.framework.Assert;
-
 import org.junit.Test;
 
 /**
- * Attempts to test that the configuration options can validate the input given
- * them. It also attempt to make sure the properties are correct.
+ * Attempts to test that the configuration options can validate the input given them. It also attempt to make sure the
+ * properties are correct.
  */
 public class FlatFileConfigurationTests {
 
@@ -50,7 +48,7 @@ public class FlatFileConfigurationTests {
         assertEquals(',', config.getFieldDelimiter());
         // set a unique attribute so there's not a runtime exception..
         config.setUniqueAttributeName("uid");
-        
+
         // test the file..
         File f = new File("test/test.csv");
         // simple property test..
@@ -59,7 +57,7 @@ public class FlatFileConfigurationTests {
         // try the validate..
         try {
             config.validate();
-            Assert.fail();
+            fail();
         } catch (RuntimeException e) {
             // expected because the file doesn't exist..
         }
@@ -76,7 +74,7 @@ public class FlatFileConfigurationTests {
         config.setEncoding(null);
         try {
             config.validate();
-            Assert.fail();
+            fail();
         } catch (IllegalArgumentException ex) {
             // should go here..
         }
@@ -88,18 +86,18 @@ public class FlatFileConfigurationTests {
         config.setFieldDelimiter('"');
         try {
             config.validate();
-            Assert.fail();
+            fail();
         } catch (IllegalStateException ex) {
             // should go here..
         }
         // fix field delimiter..
         config.setFieldDelimiter(',');
-        
+
         // test blank unique attribute..
         try {
             config.setUniqueAttributeName("");
             config.validate();
-            Assert.fail();
+            fail();
         } catch (IllegalArgumentException ex) {
             // should throw..
         }
