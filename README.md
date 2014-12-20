@@ -25,4 +25,4 @@ Available from [releases](https://github.com/Tirasa/ConnIdFlatFileBundle/release
 
  * [wiki](https://connid.atlassian.net/wiki/display/BASE/Flat+File)
  * [issues](https://connid.atlassian.net/browse/FLATFILE)
- * <a href="https://travis-ci.org/Tirasa/ConnIdFreeIPABundle"><img src="https://api.travis-ci.org/Tirasa/ConnIdFreeIPABundle.png"/></a>
+ * <a href="https://travis-ci.org/Tirasa/ConnIdFlatFileBundle"><img src="https://api.travis-ci.org/Tirasa/ConnIdFlatFileBundle.png"/></a>
