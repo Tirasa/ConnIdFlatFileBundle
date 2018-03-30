@@ -4,8 +4,8 @@ ConnIdFlatFileBundle
 The Flat file bundle is part of the [ConnId](http://connid.tirasa.net) project.
 
 <a href="https://travis-ci.org/Tirasa/ConnIdFlatFileBundle"><img src="https://api.travis-ci.org/Tirasa/ConnIdFlatFileBundle.png"/></a>
-<a href="https://maven-badges.herokuapp.com/maven-central/org.connid.bundles/org.connid.bundles.flatfile">
-  <img src="https://maven-badges.herokuapp.com/maven-central/org.connid.bundles/org.connid.bundles.flatfile/badge.svg"/>
+<a href="#">
+  <img src="https://img.shields.io/maven-central/v/org.connid.bundles/org.connid.bundles.flatfile.svg"/>
 </a>
 
 ## How to get it
